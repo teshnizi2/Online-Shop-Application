@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.SellerProfile.ManageProducts">
+   <children>
+      <Label layoutX="687.0" layoutY="164.0" text="Product ID">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="241.0" text="Product Name">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="313.0" text="Company Name">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="385.0" text="Price">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="458.0" text="Existing Number">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1313.0" layoutY="162.0" text="Category">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1278.0" layoutY="313.0" text="Special Features">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="productNameField" layoutX="879.0" layoutY="231.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="productCompanyNameField" layoutX="879.0" layoutY="303.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="productPriceField" layoutX="879.0" layoutY="375.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="productExistingNumberField" layoutX="879.0" layoutY="448.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextField>
+      <Button layoutX="955.0" layoutY="710.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="44.0" prefWidth="138.0" text="Confirm">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="productsTable" layoutX="64.0" layoutY="152.0" prefHeight="476.0" prefWidth="559.0" />
+      <Label layoutX="939.0" layoutY="61.0" text="Edit Product">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="64.0" layoutY="628.0" mnemonicParsing="false" onMouseClicked="#showProductBuyers" prefHeight="44.0" prefWidth="147.0" text="Show Buyers">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="270.0" layoutY="628.0" mnemonicParsing="false" onMouseClicked="#removeProduct" prefHeight="44.0" prefWidth="147.0" text="Remove Product">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="476.0" layoutY="628.0" mnemonicParsing="false" onMouseClicked="#showProductDetails" prefHeight="44.0" prefWidth="147.0" text="Show Details">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="backImage" fitHeight="40.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainMenuImage" fitHeight="34.0" fitWidth="34.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mainMenu.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="687.0" layoutY="525.0" text="Explanations">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="productExplanationsField" layoutX="879.0" layoutY="525.0" prefHeight="143.0" prefWidth="300.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font></TextArea>
+      <MenuButton fx:id="categoriesMenuButton" layoutX="1207.0" layoutY="231.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="300.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font></MenuButton>
+      <TableView fx:id="productSpecialFeaturesTable" editable="true" layoutX="1207.0" layoutY="375.0" prefHeight="292.0" prefWidth="300.0">
+         <columns>
+            <TableColumn fx:id="specialFeaturesColumn" prefWidth="150.5" text="Special Features" />
+            <TableColumn fx:id="valueColumn" onEditCommit="#editValueForSpecialFeature" prefWidth="148.5" text="Values" />
+         </columns>
+      </TableView>
+      <TextField fx:id="productIDField" editable="false" layoutX="880.0" layoutY="156.0" prefHeight="44.0" prefWidth="300.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font></TextField>
+      <Button fx:id="addToActionButton" layoutX="1266.0" layoutY="710.0" mnemonicParsing="false" onAction="#addProductToAction" prefHeight="44.0" prefWidth="205.0" text="Add this product to action">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

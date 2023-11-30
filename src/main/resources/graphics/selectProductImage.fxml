@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane prefHeight="638.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.products.SelectProductImage">
+   <children>
+      <ScrollPane prefHeight="637.0" prefWidth="934.0">
+         <content>
+            <Pane fx:id="mainPain" />
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

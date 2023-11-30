@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="graphics.AdminProfile.RequestDetails.RemoveProductRequestMenu"
+            prefHeight="800.0" prefWidth="1550.0">
+    <children>
+        <Label layoutX="505.0" layoutY="128.0" text="Request ID">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="188.0" text="Request Type">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="248.0" text="Product ID">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="308.0" text="Product Name">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="368.0" text="graphics.SellerProfile.Company Name">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="428.0" text="Price">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="488.0" text="Existing Number">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="548.0" text="Category">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="505.0" layoutY="608.0" text="Special Features">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="requestIDField" layoutX="705.0" layoutY="123.0" prefHeight="44.0" prefWidth="300.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="requestTypeField" layoutX="705.0" layoutY="183.0" prefHeight="44.0" prefWidth="300.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productIDField" layoutX="705.0" layoutY="243.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productNameField" layoutX="705.0" layoutY="303.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productCompanyNameField" layoutX="705.0" layoutY="363.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productPriceField" layoutX="705.0" layoutY="423.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productExistingNumberField" layoutX="705.0" layoutY="483.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productCategoryField" layoutX="705.0" layoutY="543.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="productSpecialFeaturesField" layoutX="705.0" layoutY="603.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <Button layoutX="705.0" layoutY="678.0" mnemonicParsing="false" onMouseClicked="#declineRequest" prefHeight="44.0" prefWidth="128.0" text="Decline">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Button>
+        <Label fx:id="requestTitle" layoutX="759.0" layoutY="50.0" text="Request Title">
+            <font>
+                <Font name="Times New Roman" size="36.0" />
+            </font>
+        </Label>
+        <Button layoutX="877.0" layoutY="678.0" mnemonicParsing="false" onMouseClicked="#acceptRequest" prefHeight="44.0" prefWidth="128.0" text="Accept">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="backImage" fitHeight="40.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/back.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="mainMenuImage" fitHeight="34.0" fitWidth="34.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/mainMenu.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

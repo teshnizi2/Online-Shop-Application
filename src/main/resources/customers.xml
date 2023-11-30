@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customers>
+    <customer>
+        <email>: dodo@dodo.dodo</email>
+        <lastName>babi</lastName>
+        <name>dodo</name>
+        <password>dodo</password>
+        <phoneNumber>98109804</phoneNumber>
+        <token>o0of4AE9OJWFqWtZPSYIE8DJi</token>
+        <username>dodo</username>
+        <balance>500.0</balance>
+        <bankAccountID>47039</bankAccountID>
+        <cart/>
+        <numberOfDiscountGifts>0</numberOfDiscountGifts>
+        <usedDiscounts/>
+    </customer>
+</customers>

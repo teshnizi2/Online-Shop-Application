@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1543.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.products.ProductPageController">
+   <content>
+      <Pane prefHeight="1198.0" prefWidth="1523.0">
+         <children>
+            <Pane layoutX="16.0" layoutY="8.0" prefHeight="51.0" prefWidth="1509.0" style="-fx-border-color: #c5c5c5;">
+               <children>
+                  <TextField fx:id="searchField" layoutX="1083.0" layoutY="7.0" prefHeight="37.0" prefWidth="422.0" promptText="search" />
+                  <ImageView fx:id="magnifier" fitHeight="28.0" fitWidth="33.0" layoutX="1048.0" layoutY="12.0" onMouseClicked="#magnifierClicked" onMouseEntered="#magnifierMouseEntered" onMouseExited="#magnifierMouseExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/zoom.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="backImage" fitHeight="41.0" fitWidth="32.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/back.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cartImage" fitHeight="43.0" fitWidth="47.0" layoutX="46.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/cart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="loginImage" fitHeight="37.0" fitWidth="34.0" layoutX="106.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/account.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="deleteProductButton" layoutX="548.0" layoutY="3.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="413.0" style="-fx-background-color: #EF394E; -fx-background-radius: 50;" text="ADMIN: delete product">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="mainMenuButton" fitHeight="38.0" fitWidth="36.0" layoutX="157.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/mainMenu.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="profileImage" fitHeight="33.0" fitWidth="35.0" layoutX="211.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/profileMenu.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="chatImage" fitHeight="37.0" fitWidth="37.0" layoutX="256.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/chat.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="15.0" layoutY="67.0" prefHeight="552.0" prefWidth="1510.0" style="-fx-border-color: #c5c5c5;">
+               <children>
+                  <Pane fx:id="firstPane" layoutX="524.0" layoutY="30.0" prefHeight="481.0" prefWidth="500.0" style="-fx-border-color: #c5c5c5;">
+                     <children>
+                        <Label fx:id="nameLabel" layoutX="28.0" layoutY="25.0" prefHeight="29.0" prefWidth="456.0" text="nameLabel">
+                           <font>
+                              <Font name="Times New Roman Bold" size="37.0" />
+                           </font></Label>
+                        <Label layoutX="28.0" layoutY="98.0" prefHeight="39.0" prefWidth="118.0" text="Category:">
+                           <font>
+                              <Font name="Times New Roman" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="categoryLabel" layoutX="167.0" layoutY="98.0" prefHeight="39.0" prefWidth="317.0" text="categoryLabel">
+                           <font>
+                              <Font name="Times New Roman" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="propertiesTitleLabel" layoutX="28.0" layoutY="205.0" text="properties:">
+                           <font>
+                              <Font name="Times New Roman" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="propertiesLabel" layoutX="28.0" layoutY="247.0" text="propertiesLabel">
+                           <font>
+                              <Font name="Times New Roman" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ratesLabel" layoutX="36.0" layoutY="381.0" text="rates:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="154.0" text="Company :">
+                           <font>
+                              <Font name="Times New Roman" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="companyNameLabel" layoutX="167.0" layoutY="154.0" text="CompanyNameLabel">
+                           <font>
+                              <Font name="Times New Roman" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="438.0" text="remaining:" />
+                        <Label fx:id="remainingLabel" layoutX="133.0" layoutY="438.0" text="remainingLabel" />
+                        <Button layoutX="421.0" layoutY="434.0" mnemonicParsing="false" onAction="#compareButtonPressed" text="compare" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1181.0" layoutY="110.0" prefHeight="304.0" prefWidth="262.0" style="-fx-background-color: #d5d5d5; -fx-background-radius: 30 0 30 0;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="31.0" prefHeight="34.0" prefWidth="70.0" text="Seller:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sellerNameLabel" layoutX="93.0" layoutY="31.0" prefHeight="34.0" prefWidth="157.0" text="sellerName" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="104.0" prefHeight="34.0" prefWidth="69.0" text="Price:">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="finalPriceLabel" layoutX="99.0" layoutY="147.0" prefHeight="34.0" prefWidth="145.0" text="mainPrice$" textAlignment="RIGHT" textFill="RED">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="previousPriceLabel" layoutX="88.0" layoutY="128.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Price$" wrappingWidth="86.53861999511719">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="offPercentageLabel" layoutX="197.0" layoutY="106.0" text="off%" textFill="RED">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="131.0" layoutY="84.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="131.0" layoutY="193.0" startX="-100.0" />
+                        <Pane fx:id="addToCartButton" layoutX="12.0" layoutY="224.0" prefHeight="57.0" prefWidth="239.0" style="-fx-background-color: #EF394E; -fx-background-radius: 15;">
+                           <children>
+                              <Label layoutX="45.0" layoutY="14.0" text="Add To Cart" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Pane fx:id="soldOutPane" layoutX="-1.0" layoutY="-2.0" opacity="0.0" prefHeight="61.0" prefWidth="241.0" style="-fx-background-color: #008ebe; -fx-background-radius: 15;">
+                                 <children>
+                                    <Label layoutX="63.0" layoutY="14.0" text="Sold Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="imagePane" layoutX="23.0" layoutY="30.0" prefHeight="482.0" prefWidth="461.0">
+                     <children>
+                        <StackPane fx:id="imageStackPane" layoutX="9.0" prefHeight="483.0" prefWidth="450.0" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="productAddedLabel" layoutX="1200.0" layoutY="466.0" opacity="0.0" text="Product Added To Your Cart" textFill="#fd1313">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="calculatedLeftTime" layoutX="1280.0" layoutY="58.0" opacity="0.0" text="leftTime" textFill="#fd1313">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="570.0" layoutY="521.0" text="visit number:" />
+                  <Label fx:id="visitNumberLabel" layoutX="656.0" layoutY="521.0" text="visitNumberLabel" />
+                  <Label fx:id="timeLeftLabel" layoutX="1129.0" layoutY="47.0" text="Off ends in:" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeLabel" layoutX="1249.0" layoutY="24.0" prefHeight="73.0" prefWidth="226.0" text="leftTime" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TabPane layoutX="15.0" layoutY="628.0" prefHeight="567.0" prefWidth="1508.0" style="-fx-border-color: #c5c5c5;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="explanations">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="1506.0">
+                           <children>
+                              <Label fx:id="explanationsLabel" alignment="TOP_LEFT" layoutX="43.0" layoutY="38.0" maxHeight="1.7976931348623157E308" prefHeight="451.0" prefWidth="1420.0" wrapText="true">
+                                 <font>
+                                    <Font name="Times New Roman" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="properties">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane prefHeight="535.0" prefWidth="1507.0">
+                                 <content>
+                                    <Pane fx:id="propertiesPane" prefHeight="524.0" prefWidth="1489.0" />
+                                 </content>
+                              </ScrollPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="comments">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: #c5c5c5;">
+                           <children>
+                              <ScrollPane layoutX="23.0" layoutY="14.0" prefHeight="499.0" prefWidth="1468.0">
+                                 <content>
+                                    <Pane fx:id="commentsPane" maxHeight="1.7976931348623157E308" prefHeight="497.0" prefWidth="1450.0">
+                                       <children>
+                                          <Pane layoutX="15.0" layoutY="25.0" prefHeight="94.0" prefWidth="1429.0" style="-fx-border-color: #c5c5c5;">
+                                             <children>
+                                                <Label layoutX="36.0" layoutY="33.0" text="Number Of Comments:">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="numberOfCommentsLabel" layoutX="262.0" layoutY="33.0" text="NumberOfCommentsLabel">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="helpUsLabel" layoutX="815.0" layoutY="8.0" prefHeight="79.0" prefWidth="212.0" text="Help Us Get Better!" textAlignment="CENTER" wrapText="true">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="LeaveCommentButton" layoutX="1040.0" layoutY="29.0" mnemonicParsing="false" onAction="#leaveCommentButtonPressed" prefHeight="37.0" prefWidth="194.0" text="Leave a comment">
+                                                   <font>
+                                                      <Font name="Times New Roman Bold" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="rates">
+                    <content>
+                      <AnchorPane fx:id="ratePane" minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="1506.0">
+                           <children>
+                              <Pane layoutX="34.0" layoutY="52.0" prefHeight="442.0" prefWidth="526.0" style="-fx-border-color: #c5c5c5; -fx-border-radius: 30;">
+                                 <children>
+                                    <ProgressBar fx:id="progressBar5" layoutX="131.0" layoutY="134.0" prefHeight="18.0" prefWidth="239.0" progress="0.0" />
+                                    <Label fx:id="scoreLabel" layoutX="52.0" text="4.5" textFill="#008ebe">
+                                       <font>
+                                          <Font name="System Bold" size="73.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="45.0" layoutY="117.0" prefHeight="31.0" prefWidth="22.0" text="5">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="75.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/blackStar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="progressBar4" layoutX="131.0" layoutY="198.0" prefHeight="18.0" prefWidth="239.0" progress="0.0" />
+                                    <Label layoutX="45.0" layoutY="181.0" prefHeight="31.0" prefWidth="22.0" text="4">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="75.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/blackStar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="progressBar3" layoutX="131.0" layoutY="258.0" prefHeight="18.0" prefWidth="239.0" progress="0.0" />
+                                    <Label layoutX="45.0" layoutY="241.0" prefHeight="31.0" prefWidth="22.0" text="3">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="75.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/blackStar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="progressBar2" layoutX="131.0" layoutY="322.0" prefHeight="18.0" prefWidth="239.0" progress="0.0" />
+                                    <Label layoutX="45.0" layoutY="305.0" prefHeight="31.0" prefWidth="22.0" text="2">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="75.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/blackStar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="progressBar1" layoutX="131.0" layoutY="388.0" prefHeight="18.0" prefWidth="239.0" progress="0.0" />
+                                    <Label layoutX="45.0" layoutY="371.0" prefHeight="31.0" prefWidth="22.0" text="1">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="75.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/blackStar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="numberOfScoresLabel" layoutX="192.0" layoutY="54.0" text="numberOfScoresLabel" textFill="#008ebe" />
+                                    <Label fx:id="numberOfScores5" layoutX="396.0" layoutY="133.0" text="numberOfScores5" />
+                                    <Label fx:id="numberOfScores4" layoutX="396.0" layoutY="199.0" text="numberOfScores4" />
+                                    <Label fx:id="numberOfScores3" layoutX="396.0" layoutY="259.0" text="numberOfScores3" />
+                                    <Label fx:id="numberOfScores2" layoutX="396.0" layoutY="323.0" text="numberOfScores2" />
+                                    <Label fx:id="numberOfScores1" layoutX="396.0" layoutY="387.0" text="numberOfScores1" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="rateBox" layoutX="753.0" layoutY="132.0" prefHeight="281.0" prefWidth="312.0" style="-fx-border-color: #c5c5c5; -fx-border-radius: 30;">
+                                 <children>
+                                    <Label layoutX="37.0" layoutY="25.0" text="Rate The Product!" textFill="#008ebe">
+                                       <font>
+                                          <Font name="System Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="noteForRateLabel" layoutX="37.0" layoutY="173.0" prefHeight="84.0" prefWidth="245.0" text="Note! You must buy product to rate it." textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>

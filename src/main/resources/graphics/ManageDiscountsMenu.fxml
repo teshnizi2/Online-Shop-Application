@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.AdminProfile.Discounts.ManageDiscountsMenu">
+    <children>
+        <Label layoutX="876.0" layoutY="178.0" text="Discount Code">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="238.0" text="Start Time">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="298.0" text="End Time">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="358.0" text="Discount Percent">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="418.0" text="Maximum Possible Discount">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="478.0" text="Number Per Customer">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="discountCodeField" editable="false" layoutX="1171.0" layoutY="173.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="discountPercentField" layoutX="1171.0" layoutY="353.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="maxPossibleDiscountField" layoutX="1171.0" layoutY="413.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="discountPerCustomerField" layoutX="1171.0" layoutY="473.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <DatePicker fx:id="startTimeDate" layoutX="1171.0" layoutY="233.0" prefHeight="44.0" prefWidth="300.0" />
+        <DatePicker fx:id="endTimeDate" layoutX="1171.0" layoutY="293.0" prefHeight="44.0" prefWidth="300.0" />
+        <Label layoutX="1041.0" layoutY="86.0" text="Manage Discount Code">
+            <font>
+                <Font name="Times New Roman" size="36.0" />
+            </font>
+        </Label>
+        <Button layoutX="1227.0" layoutY="669.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="44.0" prefWidth="189.0" text="Confirm">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Button>
+        <Label layoutX="876.0" layoutY="538.0" text="Including Customers">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="includingCustomersField" editable="false" layoutX="1171.0" layoutY="533.0" prefHeight="44.0" prefWidth="300.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font></TextField>
+      <Button layoutX="1334.0" layoutY="577.0" mnemonicParsing="false" onMouseClicked="#showNotIncludingCustomers" prefHeight="44.0" prefWidth="137.0" text="Add Customers">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="allDiscountsTable" layoutX="90.0" layoutY="169.0" prefHeight="415.0" prefWidth="544.0" />
+      <Button layoutX="484.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#showDetails" prefHeight="44.0" prefWidth="150.0" text="Show Details">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="90.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#removeDiscount" prefHeight="44.0" prefWidth="150.0" text="Remove">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1171.0" layoutY="577.0" mnemonicParsing="false" onMouseClicked="#clearIncludingCustomers" prefHeight="44.0" prefWidth="102.0" text="Clear">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="backImage" fitHeight="40.0" fitWidth="34.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainMenuImage" fitHeight="34.0" fitWidth="34.0" layoutX="56.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mainMenu.png" />
+         </image>
+      </ImageView>
+    </children>
+
+</AnchorPane>

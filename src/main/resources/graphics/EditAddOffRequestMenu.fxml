@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.AdminProfile.RequestDetails.EditAddOffRequestMenu">
+    <children>
+        <Label layoutX="450.0" layoutY="180.0" text="Request ID">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="240.0" text="Request Type">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="300.0" text="Off ID">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="360.0" text="Off Start Time">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="420.0" text="Off End Time">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="480.0" text="Off Amount">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="450.0" layoutY="540.0" text="Off Products">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="requestIDField" editable="false" layoutX="650.0" layoutY="175.0" prefHeight="44.0" prefWidth="300.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="requestTypeField" editable="false" layoutX="650.0" layoutY="235.0" prefHeight="44.0" prefWidth="300.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="offIDField" editable="false" layoutX="650.0" layoutY="295.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <DatePicker fx:id="offStartTimeDatePicker" editable="false" layoutX="650.0" layoutY="355.0" prefHeight="44.0" prefWidth="300.0" />
+        <DatePicker fx:id="offEndTimeDatePicker" editable="false" layoutX="650.0" layoutY="415.0" prefHeight="44.0" prefWidth="300.0" />
+        <TextField fx:id="offAmountField" editable="false" layoutX="650.0" layoutY="475.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="offProductsField" editable="false" layoutX="650.0" layoutY="535.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </TextField>
+        <Button layoutX="650.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#declineRequest" prefHeight="44.0" prefWidth="141.0" text="Decline">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Button>
+        <Label fx:id="requestTitle" layoutX="695.0" layoutY="76.0" text="Request Title">
+            <font>
+                <Font name="Times New Roman" size="36.0" />
+            </font>
+        </Label>
+      <Button layoutX="815.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#acceptRequest" prefHeight="44.0" prefWidth="135.0" text="Accept">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="backImage" fitHeight="40.0" fitWidth="34.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainMenuImage" fitHeight="34.0" fitWidth="34.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mainMenu.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

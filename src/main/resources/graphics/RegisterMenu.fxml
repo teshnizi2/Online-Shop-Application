@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="registerPane" prefHeight="392.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.LoginAndRegister.RegisterMenu">
+    <children>
+        <TextField fx:id="usernameField" layoutX="160.0" layoutY="60.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextField>
+        <TextField fx:id="firstNameField" layoutX="160.0" layoutY="140.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextField>
+        <TextField fx:id="lastNameField" layoutX="160.0" layoutY="180.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextField>
+        <TextField fx:id="emailField" layoutX="160.0" layoutY="220.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextField>
+        <TextField fx:id="phoneNumberField" layoutX="160.0" layoutY="260.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextField>
+        <PasswordField fx:id="passwordField" layoutX="160.0" layoutY="100.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></PasswordField>
+        <Label layoutX="69.0" layoutY="65.0" text="Username">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="69.0" layoutY="105.0" text="Password">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></Label>
+        <Label layoutX="69.0" layoutY="145.0" text="First name">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></Label>
+        <Label layoutX="69.0" layoutY="185.0" text="Last name">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></Label>
+        <Label layoutX="69.0" layoutY="225.0" text="Email">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></Label>
+        <Label layoutX="69.0" layoutY="265.0" text="Phone Number">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="confirmButton" layoutX="160.0" layoutY="300.0" mnemonicParsing="false" onAction="#confirm" prefHeight="26.0" prefWidth="177.0" text="Confirm">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+        </Button>
+      <MenuButton fx:id="accountTypeMenuButton" layoutX="410.0" layoutY="61.0" mnemonicParsing="false" text="Sign Up Customer">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setAccountTypeCustomer" text="Sign Up Customer" />
+          <MenuItem mnemonicParsing="false" onAction="#setAccountTypeSeller" text="Sign Up Seller" />
+        </items>
+      </MenuButton>
+    </children>
+
+</AnchorPane>

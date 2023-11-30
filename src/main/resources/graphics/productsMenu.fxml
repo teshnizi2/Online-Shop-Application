@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.products.ProductsController">
+   <children>
+      <Pagination fx:id="pagination" layoutX="7.0" layoutY="61.0" maxPageIndicatorCount="6" pageCount="3" prefHeight="731.0" prefWidth="1249.0" style="-fx-border-color: #c5c5c5;" />
+      <Pane layoutX="7.0" layoutY="7.0" prefHeight="46.0" prefWidth="892.0" style="-fx-border-color: #c5c5c5;">
+         <children>
+            <Label layoutX="320.0" layoutY="12.0" text="Sorting Based On:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="429.79998779296875" endY="-110.79999542236328" layoutX="-129.0" layoutY="123.0" startX="436.20001220703125" startY="-110.79999542236328" />
+            <Line endX="525.4000244140625" endY="-105.79999542236328" layoutX="-219.0" layoutY="138.0" startX="506.20001220703125" startY="-105.79999542236328" />
+            <Line endX="499.4000244140625" endY="-125.5999984741211" layoutX="-193.0" layoutY="148.0" startX="488.20001220703125" startY="-125.5999984741211" />
+            <Label fx:id="latestLabel" layoutX="461.0" layoutY="10.0" onMouseClicked="#latestLabelClicked" onMouseEntered="#latestLabelMouseEntered" onMouseExited="#latestLabelMouseExited" style="-fx-border-color: #c5c5c5; -fx-background-color: #7ec7f6; -fx-border-radius: 5;" text="Latest">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="visitNumberLabel" layoutX="517.0" layoutY="11.0" onMouseClicked="#visitNumberLabelClicked" onMouseEntered="#visitNumberLabelEntered" onMouseExited="#visitNumberLabelExited" style="-fx-border-color: #c5c5c5; -fx-border-radius: 5;" text="Visit Number">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lowestPriceLabel" layoutX="787.0" layoutY="12.0" onMouseClicked="#lowestPriceLabelClicked" onMouseEntered="#lowestPriceLabelMouseEntered" onMouseExited="#lowestPriceLabelMouseExited" style="-fx-border-color: #c5c5c5; -fx-border-radius: 5;" text="Lowest Price">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="scoreLabel" layoutX="621.0" layoutY="12.0" onMouseClicked="#scoreLabelClicked" onMouseEntered="#scoreLabelMouseEntered" onMouseExited="#scoreLabelMouseExited" style="-fx-border-color: #c5c5c5; -fx-border-radius: 5;" text="Score">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="highestPriceLabel" layoutX="675.0" layoutY="12.0" onMouseClicked="#highestPriceLabelClicked" onMouseEntered="#highestPriceLabelMouseEntered" onMouseExited="#highestPriceLabelMouseExited" style="-fx-border-color: #c5c5c5; -fx-border-radius: 5;" text="Highest Price">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backImage" fitHeight="29.0" fitWidth="28.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cartImage" fitHeight="35.0" fitWidth="37.0" layoutX="51.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/cart.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="loginImage" fitHeight="35.0" fitWidth="35.0" layoutX="100.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/account.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mainMenuButton" fitHeight="38.0" fitWidth="36.0" layoutX="153.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/mainMenu.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="profileImage1" fitHeight="32.0" fitWidth="37.0" layoutX="212.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profileMenu.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="existingFilterPane" layoutX="1268.0" layoutY="61.0" prefHeight="60.0" prefWidth="260.0" style="-fx-border-color: #c5c5c5;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="28.0" prefWidth="138.0" text="Only Existing Products:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <TextField fx:id="searchField" layoutX="1106.0" layoutY="11.0" prefHeight="37.0" prefWidth="422.0" promptText="search" />
+      <ImageView fx:id="magnifier" fitHeight="28.0" fitWidth="33.0" layoutX="1071.0" layoutY="16.0" onMouseClicked="#magnifierClicked" onMouseEntered="#magnifierMouseEntered" onMouseExited="#magnifierMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/zoom.png" />
+         </image></ImageView>
+      <Pane layoutX="1268.0" layoutY="281.0" prefHeight="201.0" prefWidth="260.0" style="-fx-border-color: #c5c5c5;">
+         <children>
+            <Slider fx:id="minPriceSlider" layoutX="12.0" layoutY="41.0" prefHeight="14.0" prefWidth="236.0" value="100.0" />
+            <Label layoutX="22.0" layoutY="14.0" text="From Price:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="89.0" prefHeight="17.0" prefWidth="59.0" text="To Price:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Slider fx:id="maxPriceSlider" layoutX="14.0" layoutY="116.0" prefHeight="14.0" prefWidth="236.0" />
+            <Label fx:id="minPriceLabel" layoutX="107.0" layoutY="14.0" prefHeight="17.0" prefWidth="138.0" />
+            <Label fx:id="maxPriceLabel" layoutX="108.0" layoutY="89.0" prefHeight="17.0" prefWidth="138.0" />
+            <Button fx:id="setPriceRangeButton" layoutX="53.0" layoutY="152.0" mnemonicParsing="false" text="Set Price Range">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="productsWIthOffPane" layoutX="1268.0" layoutY="131.0" prefHeight="60.0" prefWidth="260.0" style="-fx-border-color: #c5c5c5;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="28.0" prefWidth="155.0" text="Only Products  With Off:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="productsPane" layoutX="27.0" layoutY="89.0" prefHeight="638.0" prefWidth="1196.0" />
+      <Label fx:id="disableSearchFilterLabel" layoutX="910.0" layoutY="15.0" onMouseClicked="#disableSearchFilterLabelClicked" onMouseEntered="#disableSearchFilterLabelMouseEntered" onMouseExited="#disableSearchFilterLabelMouseExited" opacity="0.0" style="-fx-border-color: #c5c5c5; -fx-border-radius: 10;" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="categories" layoutX="1268.0" layoutY="555.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="260.0" text="Select Category">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </MenuButton>
+      <MenuButton fx:id="sortByFeatureMenuButton" disable="true" layoutX="1268.0" layoutY="499.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="260.0" text="sort based on special features" wrapText="true" />
+      <ImageView fx:id="magnifier2" fitHeight="28.0" fitWidth="33.0" layoutX="1268.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/zoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="magnifier3" fitHeight="28.0" fitWidth="33.0" layoutX="1268.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/zoom.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="filterBySellerTextField" layoutX="1324.0" layoutY="718.0" prefHeight="29.0" prefWidth="213.0" promptText="filter by seller" />
+      <TextField fx:id="filterByCompanyTextField" layoutX="1324.0" layoutY="760.0" prefHeight="25.0" prefWidth="213.0" promptText="filter by company" />
+      <Label fx:id="messageLabel" layoutX="352.0" layoutY="61.0" opacity="0.0" prefHeight="38.0" prefWidth="432.0" text="Label" textFill="RED" wrapText="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Pane fx:id="onlyActionPane" layoutX="1268.0" layoutY="208.0" prefHeight="60.0" prefWidth="260.0" style="-fx-border-color: #c5c5c5;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="28.0" prefWidth="155.0" text="Only Products In Action:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

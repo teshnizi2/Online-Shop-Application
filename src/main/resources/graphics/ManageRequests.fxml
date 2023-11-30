@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.AdminProfile.ManageRequests">
+   <children>
+      <TableView fx:id="allRequestsTable" layoutX="482.0" layoutY="172.0" prefHeight="456.0" prefWidth="586.0" />
+      <Label layoutX="648.0" layoutY="77.0" text="Manage Requests">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="923.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#acceptRequest" prefHeight="40.0" prefWidth="145.0" text="Accept Request">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="482.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#showRequestDetails" prefHeight="40.0" prefWidth="145.0" text="Show Details">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="703.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#declineRequest" prefHeight="40.0" prefWidth="145.0" text="Decline Request">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="backImage" fitHeight="40.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainMenuImage" fitHeight="34.0" fitWidth="34.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mainMenu.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
